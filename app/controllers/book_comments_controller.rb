@@ -7,7 +7,7 @@ class BookCommentsController < ApplicationController
 		@book_comment.book_id = @book.id
 		@book_comment.user_id = current_user.id
 		unless @book_comment.save
-		  render 'books/show'
+		  render 'error'
 		end
 	end
 
